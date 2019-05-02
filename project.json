@@ -3,6 +3,7 @@
   "description": "Chatbot/DialogFlow/Line & IROS ",
   "main": "Main.xaml",
   "dependencies": {
+    "ClovaSpeechActivities": "1.0.8",
     "UiPath.ComputerVision.Activities": "1.0.1",
     "UiPath.Excel.Activities": "[2.5.3]",
     "UiPath.Mail.Activities": "[1.4.0]",
@@ -12,7 +13,7 @@
   },
   "schemaVersion": "3.2",
   "studioVersion": "19.4.2.0",
-  "projectVersion": "1.0.8",
+  "projectVersion": "1.0.11",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
@@ -38,7 +39,7 @@
         "name": "in_Address",
         "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
         "required": false,
-        "hasDefault": false
+        "hasDefault": true
       },
       {
         "name": "out_Summary",
