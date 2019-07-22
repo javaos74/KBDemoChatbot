@@ -1,9 +1,9 @@
 {
-  "name": "KBDemoChatbot",
+  "name": "등기부등본열람",
   "description": "Chatbot/DialogFlow/Line & IROS ",
   "main": "Main.xaml",
   "dependencies": {
-    "ClovaSpeechActivities": "1.0.8",
+    "ClovaSpeechActivities": "1.0.13",
     "UiPath.ComputerVision.Activities": "1.0.1",
     "UiPath.Excel.Activities": "[2.5.3]",
     "UiPath.Mail.Activities": "[1.4.0]",
