@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>818.4,856.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>818.4,972.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -64,7 +64,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="778.4,736.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="매개변수&#xD;&#xA;Input Argument:&#xD;&#xA;in_Type : String : 부동산 등기, 법인 등기 중 택 1&#xD;&#xA;in_Address : String : 검새하고자 하는 전체 주소&#xD;&#xA;out_Summary : String : 결과&#xD;&#xA;in_category : String : 부동산 등기 중에서 부동산 구분(ex: 토지, 건물,...)&#xD;&#xA;in_Part : String : 등기 기록을 전부 읽을일 일부만 읽을지 선택.  in_Part가 &quot;전부&quot; 일 시 전부 읽고 아니면 일부만 읽음&#xD;&#xA;in_Read : String : 등기 기록 중 유효 기록만 읽을지, 말소 부분도 읽을지 선택. &quot;유효&quot; 일 시 유효 부분만 읽고 아니면 말소도 포함&#xD;&#xA;in_RegistNum : String : 법인 등록 번호" sap:VirtualizedContainerService.HintSize="778.4,892.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="Matches" />
       <Variable x:TypeArguments="x:String" Default="[string.Empty]" Name="AptDong" />
@@ -79,6 +79,7 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Sequence sap:VirtualizedContainerService.HintSize="740,644" sap2010:WorkflowViewState.IdRef="Sequence_4">
@@ -89,7 +90,7 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="701.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
         <ui:CommentOut.Body>
-          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="368.8,804.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="368.8,806.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -98,7 +99,7 @@
             <ui:KillProcess ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="330.4,22.4" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="iexplore" />
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="330.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[String.Format(&quot;입력된 주소: {0}&quot;, in_Address)]" />
             <ui:Matches BuilderPattern="(\d+)동\s*(\d+)호$" sap:VirtualizedContainerService.HintSize="330.4,60" sap2010:WorkflowViewState.IdRef="Matches_1" Input="[in_Address]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(\\d+)동\\s*(\\d+)호$&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(\d+)동\s*(\d+)호$" RegexOption="IgnoreCase, Singleline" Result="[Matches]" />
-            <ui:ForEach x:TypeArguments="str:Match" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="314,417" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Matches]">
+            <ui:ForEach x:TypeArguments="str:Match" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="330.4,418.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Matches]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="str:Match">
                   <ActivityAction.Argument>
